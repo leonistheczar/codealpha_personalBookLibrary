@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/58218da0f5.js" crossorigin="anonymous"></script>
+    <script type="module" src="./js/userAuth.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/input.css">
+    <title>Book Nest</title>
+</head>
+<body>
+    
+    <!-- Navbar & Main Section -->
+    <section id="main-intro">
+        <div class="navbar">
+        <a href="index.html" style="position: relative; top: 4px;"><img class="title-nav" src="./img/logo.png" style="width: 190px;"></img></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userAuth.html">Register</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userLogin.html">Login</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                    <div id="under-animated-line"></div>
+                </li>   
+                <li>
+                    <a href="contact.html">Contact</a>
+                    <div id="under-animated-line"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </section>
+        <!-- User Authentication / Login -->
+        <section id="userRegistration">
+            <div class="registration-container">
+                <form id="register">
+                    <h2>Register / Sign Up</h2>
+                    <div id="signUpDetails">
+                        <div class="firstName">
+                            <input type="text" name="firstName" id="firstNameInput" required autocomplete="additional-name">
+                            <label>First Name</label>
+                        </div>
+                        <div class="lastName">
+                            <input type="text" name="lastName" id="lastNameInput" required autocomplete="additional-name">
+                            <label>Last Name</label>
+                        </div>
+                        <div class="contact">
+                            <input type="text" name="contact" id="contactInput" required autocomplete="mobile">
+                            <label>Contact</label>
+                        </div>
+                        <div class="email">
+                            <input type="text" name="email" id="emailInput" required autocomplete="email">
+                            <label>Email</label>
+                        </div>
+                        <div class="password">
+                            <input type="password" name="password" id="passwordInput" required autocomplete="new-password">
+                            <label>Password</label>
+                            <i class="fa-solid fa-eye fa-sm" id="eyeIcon"></i>
+                        </div>
+                        <div class="confirmPassword">
+                            <input type="password" name="confirmPassword" id="confirmPasswordInput" required autocomplete="new-password">
+                            <label>Confirm Password</label>
+                            <i class="fa-solid fa-eye fa-sm" id="cfEye"></i>
+                        </div>
+                    </div>
+                    <input href="#" type="submit" value="Sign Up" id="signUpSubmit" class="btn-primary"></input>
+                </form>
+                <div class="toLogin">
+                    <p>Already have an account?</p>
+                    <a href="userLogin.html">Sign In</a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="footer-content">
+                <p class="footer-description">All Rights Reserved | Copyrights &copy; 2024</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- JS File -->
+    <script type="module" src="./js/script.js" defer></script>
+</body>
+</html>

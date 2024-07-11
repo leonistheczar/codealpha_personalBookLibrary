@@ -1,0 +1,16 @@
+{
+  "name": "personal-book-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/:src/css/ --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "firebase": "^10.12.3",
+    "sass": "^1.77.6"
+  }
+}

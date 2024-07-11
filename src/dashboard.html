@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/58218da0f5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/input.css">
+    <title>Book Nest</title>
+</head>
+<body>
+    <!-- Navbar & Main Section -->
+    <section id="main-intro">
+        <div class="navbar">
+        <a href="index.html" style="position: relative; top: 4px;"><img class="title-nav" src="./img/logo.png" style="width: 190px;"></img></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userAuth.html">Register</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userLogin.html">Login</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                    <div id="under-animated-line"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+        <section id="dashboard-library" style="min-height: 100vh;">
+            <div class="container">
+                <div id="main-dashboard">
+                <h2 id="dashboard-user"></h2>
+                <a href="#" class="logOut">Log Out</a>
+                </div>
+                <div id="dashboard-content-add">
+                    <form id="dashboard-form">
+                    <input type="text" class="book-input" name="BookName" id="bookName" placeholder="Enter Book Name">
+                    <input type="text" class="book-input" name="bookAuthor" id="bookAuthor" placeholder="Enter Book Author">
+                    <input type="text" class="book-input" name="bookCategory" id="bookCategory" placeholder="Enter Book Category">
+                    <input type="text" class="book-input" name="bookType" id="bookType" placeholder="Enter Book Type">
+                    <span id="bookCover">Choose a Book Cover</span>
+                    <input type="file" name="image" accept="image/*" id="bookImage" title="Book Cover" required>
+                    <button type="submit" id="submitBook">Add Book</button>
+                </form>
+                <a href="#" class="btnDelete">Delete all Books</a>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Book Name</th>
+                                <th>Book Author</th>
+                                <th>Book Category</th>
+                                <th>Book Type</th>
+                                <th>Book Cover</th>
+                                <th>Delete Book</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+        <!-- Footer -->
+        <footer id="main-footer">
+            <div class="footer-content">
+                <p class="footer-description">All Rights Reserved | Copyrights &copy; 2024</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- JS File -->
+    <script type="module" src="./js/script.js" defer></script>
+</body>
+</html>

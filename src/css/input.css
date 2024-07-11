@@ -1,0 +1,742 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  max-width: 1380px;
+}
+
+.container {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1380px;
+  line-height: 1.4;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: rgba(30, 30, 30, 0.8980392157);
+  text-decoration: none;
+  color: #fffff3;
+}
+
+.btn-black {
+  display: block;
+  margin-top: 1.2rem;
+  text-align: center;
+  background: rgba(30, 30, 30, 0.8980392157);
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  transition: background 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.btn-black:hover {
+  background: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+
+#under-animated-line {
+  height: 2px;
+  margin-top: 0.25rem;
+  width: 100%;
+  background: #ffee00;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.nav-links ul li:hover #under-animated-line {
+  animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.underline {
+  display: block;
+  height: 4px;
+  margin: 0.5rem auto 0 auto;
+  width: 3rem;
+  background: #ffee00;
+  display: flex;
+  justify-content: center;
+}
+
+.link-btn {
+  font-size: 1.2rem;
+  background: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.4rem;
+  font-weight: bold;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.link-btn:hover {
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+}
+
+#signIn {
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#signIn:hover {
+  background: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+
+#main-intro {
+  color: #fffff3;
+  height: 100%;
+  width: 100%;
+}
+#main-intro .navbar {
+  background: rgba(30, 30, 30, 0.8980392157);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+#main-intro .navbar .nav-links ul {
+  display: flex;
+}
+#main-intro .navbar .nav-links ul li {
+  padding: 1.2rem;
+}
+#main-intro .showcase-content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#main-intro .showcase-content h1 {
+  font-size: 5rem;
+}
+#main-intro .showcase-content p {
+  font-size: 1.4rem;
+}
+#main-intro .showcase-content #user-links {
+  margin-top: 2rem;
+}
+#main-intro .showcase-content #user-links a {
+  margin-right: 1.2rem;
+}
+
+#features {
+  background: rgba(255, 255, 255, 0.8901960784);
+}
+#features #features-heading h1 {
+  font-weight: 300;
+  text-align: center;
+  font-size: 2.2rem;
+}
+#features .library-features {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#features .library-features div {
+  padding: 0 1.2rem;
+}
+#features .library-features div h3 {
+  margin: 1.2rem;
+}
+#features .library-features div p {
+  text-align: justify;
+}
+
+#userRegistration {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+  background: rgb(210, 231, 245);
+}
+#userRegistration .registration-container {
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+}
+#userRegistration .registration-container .toLogin {
+  display: flex;
+  justify-content: space-evenly;
+}
+#userRegistration .registration-container .toLogin a {
+  color: blue;
+  margin-right: 1.4rem;
+  text-decoration: underline;
+}
+#userRegistration #register #signUpDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#userRegistration #register #signUpDetails div label {
+  margin-right: 1.4rem;
+}
+#userRegistration #register #signUpDetails .firstName {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .firstName label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .firstName #firstNameInput {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .firstName #firstNameInput:focus + label, #userRegistration #register #signUpDetails .firstName #firstNameInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .firstName #firstNameInput:focus + label {
+  color: rgb(204, 207, 10);
+}
+#userRegistration #register #signUpDetails .firstName #firstNameInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .lastName {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .lastName label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .lastName #lastNameInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .lastName #lastNameInput:focus + label, #userRegistration #register #signUpDetails .lastName #lastNameInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .lastName #lastNameInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration #register #signUpDetails .lastName #lastNameInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .contact {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .contact label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .contact #contactInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .contact #contactInput:focus + label, #userRegistration #register #signUpDetails .contact #contactInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .contact #contactInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration #register #signUpDetails .contact #contactInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .email {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .email label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .email #emailInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .email #emailInput:focus + label, #userRegistration #register #signUpDetails .email #emailInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .email #emailInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration #register #signUpDetails .email #emailInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .password {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .password label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .password #passwordInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .password #passwordInput:focus + label, #userRegistration #register #signUpDetails .password #passwordInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .password #passwordInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration #register #signUpDetails .password #passwordInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .password i {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  cursor: pointer;
+  color: black;
+}
+#userRegistration #register #signUpDetails .password i:hover {
+  color: #c2bf00;
+}
+#userRegistration #register #signUpDetails .confirmPassword {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration #register #signUpDetails .confirmPassword label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration #register #signUpDetails .confirmPassword #confirmPasswordInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration #register #signUpDetails .confirmPassword #confirmPasswordInput:focus + label, #userRegistration #register #signUpDetails .confirmPassword #confirmPasswordInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration #register #signUpDetails .confirmPassword #confirmPasswordInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration #register #signUpDetails .confirmPassword #confirmPasswordInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration #register #signUpDetails .confirmPassword i {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  cursor: pointer;
+  color: black;
+}
+#userRegistration #register #signUpDetails .confirmPassword i:hover {
+  color: #c2bf00;
+}
+#userRegistration #register h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+#userRegistration #register #signUpSubmit {
+  display: inline-block;
+  background-color: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+  padding: 0.75rem 2rem;
+  margin: 1.4rem 0rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: background 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#userRegistration #register #signUpSubmit:hover {
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+}
+
+#userRegistration {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+  background: rgb(210, 231, 245);
+}
+#userRegistration .registration-container {
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+}
+#userRegistration .registration-container .toSignUp {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.75rem;
+}
+#userRegistration .registration-container .toSignUp a {
+  color: blue;
+  margin-left: 1rem;
+  text-decoration: underline;
+}
+
+#userRegistration .registration-container #register #signInSubmit {
+  display: inline-block;
+  background-color: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+  padding: 0.75rem 2rem;
+  margin: 1.4rem 0rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#userRegistration .registration-container #register #signInSubmit:hover {
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+}
+#userRegistration .registration-container #register #signInDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#userRegistration .registration-container #register #signInDetails div label {
+  margin-right: 1.4rem;
+}
+#userRegistration .registration-container #register #signInDetails .email {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration .registration-container #register #signInDetails .email label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration .registration-container #register #signInDetails .email #emailInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration .registration-container #register #signInDetails .email #emailInput:focus + label, #userRegistration .registration-container #register #signInDetails .email #emailInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration .registration-container #register #signInDetails .email #emailInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration .registration-container #register #signInDetails .email #emailInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration .registration-container #register #signInDetails .password {
+  padding: 0.75rem 0rem;
+  position: relative;
+}
+#userRegistration .registration-container #register #signInDetails .password label {
+  position: absolute;
+  background: #fff;
+  padding: 0 0.5rem;
+  top: 20px;
+  left: 12px;
+  cursor: text;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+#userRegistration .registration-container #register #signInDetails .password #passwordInput {
+  width: 300px;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(30, 30, 30, 0.8980392157);
+}
+#userRegistration .registration-container #register #signInDetails .password #passwordInput:focus + label, #userRegistration .registration-container #register #signInDetails .password #passwordInput:valid + label {
+  font-size: 15px;
+  top: 1px;
+}
+#userRegistration .registration-container #register #signInDetails .password #passwordInput:focus + label {
+  color: rgb(216, 216, 0);
+}
+#userRegistration .registration-container #register #signInDetails .password #passwordInput:focus {
+  border-color: #ffee00;
+  outline: 1px solid #ffee00;
+}
+#userRegistration .registration-container #register #signInDetails .password i {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+  cursor: pointer;
+  color: black;
+}
+#userRegistration .registration-container #register #signInDetails .password i:hover {
+  color: #c2bf00;
+}
+
+#contact-intro {
+  color: #fffff3;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #ffee00;
+}
+#contact-intro .contact-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+#contact-intro .contact-navbar .nav-links ul {
+  display: flex;
+}
+#contact-intro .contact-navbar .nav-links ul li {
+  padding: 1.5rem;
+}
+
+#contact-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1.4rem;
+  gap: 2rem;
+}
+.contact-form #name {
+  display: flex;
+}
+.contact-form #name input {
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  margin-left: 0.75rem;
+}
+.contact-form #email {
+  display: flex;
+}
+.contact-form #email input {
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  margin-left: 0.75rem;
+}
+.contact-form #phone {
+  display: flex;
+}
+.contact-form #phone input {
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  margin-left: 0.75rem;
+}
+.contact-form #country {
+  display: flex;
+}
+.contact-form #country input {
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  margin-left: 0.75rem;
+}
+.contact-form #message {
+  grid-column: 1/span 2;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form #message #messageBox {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+#dashboard-library {
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+#dashboard-library #main-dashboard {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+#dashboard-library #main-dashboard h2 {
+  font-size: 1.1rem;
+}
+#dashboard-library #main-dashboard a {
+  color: #fff;
+  margin-right: 1.2rem;
+}
+#dashboard-library #main-dashboard a:hover {
+  text-decoration: underline;
+}
+#dashboard-library #dashboard-content-add {
+  background: #e2e2e2;
+  padding: 1.6rem;
+  margin-top: 0.75rem;
+  position: relative;
+}
+#dashboard-library #dashboard-content-add .btnDelete {
+  background: #920000;
+  color: #fffff0;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+}
+#dashboard-library #dashboard-content-add .btnDelete:hover {
+  background: #a30d0d;
+}
+#dashboard-library #dashboard-content-add #dashboard-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+#dashboard-library #dashboard-content-add #dashboard-form .book-input {
+  padding: 0.5rem;
+}
+#dashboard-library #dashboard-content-add #dashboard-form #bookCover {
+  font-weight: bold;
+}
+#dashboard-library #dashboard-content-add #dashboard-form #submitBook {
+  grid-column: 1/span 2;
+  font-size: 0.8rem;
+  width: 20%;
+  padding: 0.5rem 0;
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fffff0;
+  border: none;
+  outline: none;
+  transition: all 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+}
+#dashboard-library #dashboard-content-add #dashboard-form #submitBook:hover {
+  background: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+#dashboard-library .logOut {
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+#dashboard-library .table-container {
+  margin-top: 1.8rem;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+#dashboard-library table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#dashboard-library th, #dashboard-library td {
+  padding: 12px 15px;
+  text-align: left;
+}
+#dashboard-library th {
+  background-color: #333;
+  color: #fff;
+}
+#dashboard-library tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#main-footer {
+  background: rgba(30, 30, 30, 0.8980392157);
+  color: #fff;
+  padding: 1.5rem 3rem;
+}
+#main-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+#main-footer .footer-content .footer-links a {
+  margin-right: 1.2rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+#main-footer .footer-content .footer-links a:hover {
+  background: #ffee00;
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+
+/*# sourceMappingURL=input.css.map */

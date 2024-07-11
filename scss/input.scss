@@ -1,0 +1,795 @@
+// Sass Variables
+$primary-color: #ffee00;
+$secondary-color: #91e7cb;
+$complementary-color: #1e1e1ee5;
+$white-offset: #fffff0;
+$font-PT: "PT Sans", sans-serif;
+$font-weight: 400;
+$font-style: normal;
+$max-width: 1380px;
+
+
+// Resetting Everything
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $font-PT;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    line-height: 1.4;
+    max-width: $max-width;
+}
+// Utility Classes & IDs
+.container{
+    padding: 2rem;
+    margin: auto;
+    max-width: $max-width;
+    line-height: 1.4;
+}
+li{
+    list-style: none;
+}
+
+a{
+    color: $complementary-color;
+    text-decoration: none;
+    color: #fffff3;
+}
+.btn-black{
+    display: block;
+    margin-top: 1.2rem;
+    text-align: center;
+    background: $complementary-color;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    transition: background 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.btn-black:hover{
+    background: $primary-color;
+    color: $complementary-color;
+}
+// Yellow Underline animation 
+#under-animated-line{
+    height: 2px;
+    margin-top: 0.25rem;
+    width: 100%;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+.nav-links ul li:hover  #under-animated-line{
+    animation: myAnim 1s cubic-bezier(0.25, 1, 0.5, 1) 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-2px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+//Without Animation
+.underline{
+    display: block;
+    height: 4px;
+    margin: 0.5rem auto 0 auto;
+    width: 3rem;
+    background: $primary-color;
+    display: flex;
+    justify-content: center;
+}
+
+.link-btn{
+    font-size: 1.2rem;
+    background: $primary-color;
+    color: $complementary-color;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.4rem;
+    font-weight: bold;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.link-btn:hover{
+    background: $complementary-color;
+    color: $white-offset;
+}
+#signIn{
+    background: $complementary-color;
+    color: $white-offset;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#signIn:hover{
+    background: $primary-color;
+    color: $complementary-color;
+}
+
+//Navbar
+#main-intro{
+    color: #fffff3;
+    height: 100%;
+    width: 100%;
+    .navbar{
+        background: $complementary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+       
+    .nav-links ul{
+            display: flex;
+              li{
+                padding: 1.2rem;
+            }
+        }
+    }
+
+    // Main Showcase
+        .showcase-content{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        h1{
+            font-size: 5rem;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+        #user-links{
+            margin-top: 2rem;
+            a{
+                margin-right: 1.2rem;
+            }
+        }
+    }
+}
+// Features
+#features{
+    background: #ffffffe3;
+        #features-heading{
+        h1{
+            font-weight: 300;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+    }
+    .library-features{
+        padding-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div {
+            padding: 0 1.2rem;
+            h3{
+            margin: 1.2rem;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+    }
+}
+//User Authentication (Register/SignUp)
+#userRegistration{
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem;
+    background: rgb(210, 231, 245);
+    .registration-container{
+        padding: 2.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+
+        .toLogin{
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                color: blue;
+                margin-right: 1.4rem;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    //SignUp
+    #register{
+        #signUpDetails{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div label{
+                margin-right: 1.4rem;
+            }
+            .firstName{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                }
+                #firstNameInput{
+                    position: relative;
+                    z-index: 1;
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    background: transparent;
+                    border: 1px solid $complementary-color;
+                    
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(204, 207, 10);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+            }
+            .lastName{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                }
+                #lastNameInput{
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    border: 1px solid $complementary-color;
+
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(216, 216, 0);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+            }
+            .contact{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                }
+                #contactInput{
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    border: 1px solid $complementary-color;
+
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(216, 216, 0);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+            }
+            .email{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{                    
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                }
+                #emailInput{
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    border: 1px solid $complementary-color;
+
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(216, 216, 0);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+            }
+            .password{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{                   
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                    
+                }
+                #passwordInput{
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    border: 1px solid $complementary-color;
+
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(216, 216, 0);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+                    i{
+                        position: absolute;
+                        top: 32px;
+                        right: 8px;
+                        cursor: pointer;
+                        color: black;
+                        
+                        &:hover{
+                            color: #c2bf00;
+                        }
+                    }
+            }
+            .confirmPassword{
+                padding: 0.75rem 0rem;
+                position: relative;
+                label{                    
+                    position: absolute;
+                    background: #fff;
+                    padding: 0 0.5rem;
+                    top: 20px;
+                    left: 12px;
+                    cursor: text;
+                    z-index: 2;
+                    transition: all .2s ease;
+                }
+                #confirmPasswordInput{
+                    width: 300px;
+                    height: 40px;
+                    padding: 0 0.75rem;
+                    border: 1px solid $complementary-color;
+
+                    &:focus + label,
+                    &:valid + label {
+                        font-size: 15px;
+                        top: 1px;
+                    }
+                    &:focus + label{
+                        color: rgb(216, 216, 0);
+                    }
+                    &:focus{
+                        border-color: $primary-color;
+                        outline: 1px solid $primary-color;
+                    }
+                }
+                i{
+                    position: absolute;
+                    top: 32px;
+                    right: 8px;
+                    cursor: pointer;
+                    color: black;
+                    
+                    &:hover{
+                        color: #c2bf00;
+                    }
+                }
+            }
+
+        }
+        h2{
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        #signUpSubmit{
+            display: inline-block;
+            background-color: $primary-color;
+            color: $complementary-color;
+            padding: 0.75rem 2rem;
+            margin: 1.4rem 0rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            transition: background 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            &:hover{
+                background: $complementary-color;
+                color: $white-offset;
+            }
+        }
+    }
+}
+//Signing In
+#userRegistration{
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem;
+    background: rgb(210, 231, 245);
+    .registration-container{
+        padding: 2.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+
+        .toSignUp{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 0.75rem;
+            a{
+                color: blue;
+                margin-left: 1rem;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+    //SignUp
+    #userRegistration{
+        .registration-container{
+            #register{
+                
+        #signInSubmit{
+            display: inline-block;
+            background-color: $primary-color;
+            color: $complementary-color;
+            padding: 0.75rem 2rem;
+            margin: 1.4rem 0rem;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+            &:hover{
+                background: $complementary-color;
+                color: $white-offset;
+            }
+        }
+                #signInDetails{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    div label{
+                        margin-right: 1.4rem;
+                    }
+                    
+                    .email{
+                        padding: 0.75rem 0rem;
+                        position: relative;
+                        label{                    
+                            position: absolute;
+                            background: #fff;
+                            padding: 0 0.5rem;
+                            top: 20px;
+                            left: 12px;
+                            cursor: text;
+                            z-index: 2;
+                            transition: all .2s ease;
+                        }
+                        #emailInput{
+                            width: 300px;
+                            height: 40px;
+                            padding: 0 0.75rem;
+                            border: 1px solid $complementary-color;
+        
+                            &:focus + label,
+                            &:valid + label {
+                                font-size: 15px;
+                                top: 1px;
+                            }
+                            &:focus + label{
+                                color: rgb(216, 216, 0);
+                            }
+                            &:focus{
+                                border-color: $primary-color;
+                                outline: 1px solid $primary-color;
+                            }
+                        }
+                    }
+                    .password{
+                        padding: 0.75rem 0rem;
+                        position: relative;
+                        label{                   
+                            position: absolute;
+                            background: #fff;
+                            padding: 0 0.5rem;
+                            top: 20px;
+                            left: 12px;
+                            cursor: text;
+                            z-index: 2;
+                            transition: all .2s ease;
+                            
+                        }
+                        #passwordInput{
+                            width: 300px;
+                            height: 40px;
+                            padding: 0 0.75rem;
+                            border: 1px solid $complementary-color;
+        
+                            &:focus + label,
+                            &:valid + label {
+                                font-size: 15px;
+                                top: 1px;
+                            }
+                            &:focus + label{
+                                color: rgb(216, 216, 0);
+                            }
+                            &:focus{
+                                border-color: $primary-color;
+                                outline: 1px solid $primary-color;
+                            }
+                        }
+                        i{
+                            position: absolute;
+                            top: 32px;
+                            right: 8px;
+                            cursor: pointer;
+                            color: black;
+                            
+                            &:hover{
+                                color: #c2bf00;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+//Contact Page
+
+//Navbar
+#contact-intro{
+    color: #fffff3;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid $primary-color;
+    .contact-navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+       
+    .nav-links ul{
+            display: flex;
+              li{
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+#contact-heading{
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 300;
+}
+//Contact Form
+.contact-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 1.4rem;
+    gap: 2rem;
+    #name{
+        display: flex;
+        input{
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            margin-left: 0.75rem;
+        }
+    }
+    #email{
+        display: flex;
+        input{
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            margin-left: 0.75rem;
+        }
+    }
+    #phone{
+        display: flex;
+        input{
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            margin-left: 0.75rem;
+        }
+    }
+    #country{
+        display: flex;
+        input{
+            padding: 0.5rem 0.75rem;
+            width: 100%;
+            margin-left: 0.75rem;
+        }
+    }
+    #message{
+        grid-column: 1 / span 2;
+        display: flex;
+        flex-direction: column;
+        #messageBox{
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Dashboard
+    #dashboard-library{
+        color: $complementary-color;
+        #main-dashboard{
+            display: flex;
+            justify-content: space-between;
+            background: $complementary-color;
+            color: $white-offset;
+            padding:0.5rem;
+            border-radius: 10px;
+            h2{
+                font-size: 1.1rem;
+            }
+            a{
+                color: #fff;
+                margin-right: 1.2rem;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        #dashboard-content-add{
+            background: #e2e2e2;
+            padding: 1.6rem;
+            margin-top: 0.75rem;
+            position: relative;
+            .btnDelete{
+                background: #920000;
+                &:hover{
+                    background: #a30d0d;
+                }
+                color: #fffff0;
+                padding: 0.4rem;
+                font-size: 0.9rem;
+                position: absolute;
+                right: 20px;
+                bottom: 25px;
+            }
+            #dashboard-form{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 1.2rem;
+                .book-input{
+                    padding: 0.5rem;
+                }
+                #bookCover{
+                    font-weight: bold;
+                }
+                #submitBook{
+                    grid-column: 1 /span 2;
+                    font-size: 0.8rem;
+                    width: 20%;
+                    padding: 0.5rem 0;
+                    background: $complementary-color;
+                    color: $white-offset;
+                    border: none;
+                    outline: none;
+                    transition: all 0.1s cubic-bezier(0.215, 0.610, 0.355, 1);
+                    cursor: pointer;
+                    &:hover{
+                        background: $primary-color;
+                        color: $complementary-color;
+                    }
+                }
+            }
+        }
+        .logOut{
+            color: $complementary-color;
+        }
+        .table-container {
+                margin-top: 1.8rem;
+                background-color: #fff;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 12px 15px;
+                text-align: left;
+            }
+            th {
+                background-color: #333;
+                color: #fff;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        }
+// Footer
+#main-footer{
+    background: $complementary-color;
+    color: #fff;
+    padding: 1.5rem 3rem;
+        .footer-content{
+            display: flex;
+            justify-content: space-between;
+            .footer-links{
+                a{
+                    margin-right: 1.2rem;
+                    padding: .75rem;
+                    font-size: 1.2rem;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    }
+                a:hover{
+                    background: $primary-color;
+                    color: $complementary-color;
+                    }
+                }
+            }
+}

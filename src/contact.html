@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/58218da0f5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/input.css">
+    <title>Book Nest</title>
+</head>
+<body>
+    
+    <!-- Navbar & Main Section -->
+    <section id="contact-intro" style="background: url(./img/showcase.png) no-repeat center center /cover; height: 15vh;">
+        <div class="contact-navbar">
+        <a href="index.html" style="position: relative; top: 4px;"><img class="title-nav" src="./img/logo.png" style="width: 190px;"></img></a>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userAuth.html">Register</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="userLogin.html">Login</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                    <div id="under-animated-line"></div>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                    <div id="under-animated-line"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- Contact Showcase -->
+    <section id="contact">
+        <div class="container">
+            <h1 id="contact-heading">Contact Us</h1>
+            <div class="underline"></div>
+            <form class="contact-form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <div id="name">
+                    <h3>Name</h3>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div id="email">
+                    <h3>Email</h3>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div id="phone">
+                    <h3>Phone</h3>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div id="country">
+                    <h3>Country</h3>
+                    <input type="text" id="country" name="country">
+                </div>
+                <div id="message">
+                    <h3>Message</h3>
+                    <textarea name="messageBox" id="messageBox" cols="30" rows="8" name="message"></textarea>
+                </div>
+                <div class="recaptcha">
+                <div data-netlify-recaptcha="true"></div>
+                </div>
+            </form>
+            <div class="contact-form-submit">
+                <a href="#" id="contact-submit" class="btn-black">Submit</a>
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+     <footer id="main-footer">
+        <div class="footer-content">
+            <p class="footer-description">All Rights Reserved | Copyrights &copy; 2024</p>
+            <div class="footer-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<!-- JS File -->
+<script type="module" src="./js/script.js"></script>
+</body>
