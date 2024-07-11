@@ -33,7 +33,7 @@
 // Initialize Firestore
   const db = getFirestore(app);
 
-
+// Sign Up
   async function userSignup(e) {
       e.preventDefault();
 

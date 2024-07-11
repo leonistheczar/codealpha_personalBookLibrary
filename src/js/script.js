@@ -198,6 +198,7 @@ async function addBooksToTable(e) {
   }
 }
 
+// Save to Firestore DB
 async function saveBookToFirestore(
   uid,
   bookId,
@@ -237,6 +238,7 @@ if (window.location.href.includes('dashboard.html')) {
   });
 }
 
+// Load from Firestore DB
 async function loadBooksForUser(uid) {
   const q = query(collection(db, "bookDetails"), where("uid", "==", uid));
   const querySnapshot = await getDocs(q);
