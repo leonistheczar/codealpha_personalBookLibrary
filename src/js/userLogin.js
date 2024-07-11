@@ -1,10 +1,6 @@
   // Parsing variables for Signing In
-  const firstNameInput = document.querySelector('#firstNameInput');
-  const lastNameInput = document.querySelector('#lastNameInput');
-  const contactInput = document.querySelector('#contactInput');
   const emailInput = document.querySelector('#emailInput');
   const passwordInput = document.querySelector('#passwordInput');
-  const cfPasswordInput = document.querySelector('#confirmPasswordInput');
   const submitForm = document.querySelector('#register');
 
   //  Event Listeners
