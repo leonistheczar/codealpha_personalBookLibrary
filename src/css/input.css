@@ -626,6 +626,20 @@ a {
   font-size: 0.9rem;
 }
 
+.contact-form-submit {
+  display: flex;
+  justify-content: center;
+}
+.contact-form-submit #contact-submit {
+  border: none;
+  color: #fffff0;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.contact-form-submit #contact-submit:hover {
+  color: rgba(30, 30, 30, 0.8980392157);
+}
+
 #dashboard-library {
   color: rgba(30, 30, 30, 0.8980392157);
 }

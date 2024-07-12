@@ -43,14 +43,14 @@ const delBtn = document.querySelector(".btnDelete");
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function loadEventListeners() {
-  if (window.location.href.includes("userAuth.html")) {
+  if (window.location.href.includes("/userAuth")) {
     passwordIcon.addEventListener("click", changePasswordInputType);
     CFpasswordIcon.addEventListener("click", changeConfirmPasswordInputType);
   }
-  if (window.location.href.includes("userLogin.html")) {
+  if (window.location.href.includes("/userLogin")) {
     passwordIcon.addEventListener("click", changePasswordInputType);
   }
-  if (window.location.href.includes("dashboard.html")) {
+  if (window.location.href.includes("/dashboard")) {
     dashForm.addEventListener("submit", addBooksToTable);
     btnLogOut.addEventListener("click", userSignOut);
     delBtn.addEventListener("click", async () => {
@@ -91,7 +91,7 @@ function changeConfirmPasswordInputType() {
 // Add books
 let bookId = 1; // Initialize book ID counter
 async function addBooksToTable(e) {
-  if (window.location.href.includes('dashboard.html')) {
+  if (window.location.href.includes('/dashboard')) {
   e.preventDefault();
   const user = auth.currentUser;
   const email = user.email;
@@ -226,7 +226,7 @@ async function saveBookToFirestore(
 }
 
 // Current User
-if (window.location.href.includes('dashboard.html')) {
+if (window.location.href.includes('/dashboard')) {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
@@ -330,7 +330,7 @@ async function deleteAllBooksForUser(uid) {
 function userSignOut() {
   signOut(auth)
     .then(() => {
-      window.location.href = "userLogin.html";
+      window.location.href = "/userLogin";
       alert("Signed Out");
     })
     .catch((error) => {

@@ -677,6 +677,19 @@ a{
         }
     }
 }
+    .contact-form-submit{
+        display: flex;
+        justify-content: center;
+        #contact-submit{
+            border: none;
+            color: $white-offset;
+            font-weight: lighter;
+            cursor: pointer;
+            &:hover{
+                color: $complementary-color;
+            }
+        }
+    }
 
 // Dashboard
     #dashboard-library{
